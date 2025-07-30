@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexographic Printing | Axe Packages</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        .transparent-header {
+            position: fixed;
+            width: 100%;
+            background: rgba(0, 0, 0, 0);
+            z-index: 1000;
+            transition: background 0.3s ease;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo img {
+            height: 100px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: #ff6b00;
+        }
+
+        /* Hero Section */
+        .product-hero {
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        /* Product Detail Section */
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .product-detail-container {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .product-description {
+            flex: 1;
+        }
+
+        .product-description h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .product-description h2 span {
+            color: #ff6b00;
+        }
+
+        .product-description p {
+            font-size: 16px;
+            margin-bottom: 30px;
+            color: #666;
+        }
+
+        .product-features h3,
+        .technical-specs h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .product-features ul,
+        .technical-specs ul {
+            list-style: none;
+        }
+
+        .product-features ul li,
+        .technical-specs ul li {
+            font-size: 16px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .product-features ul li i {
+            color: #ff6b00;
+            margin-right: 10px;
+        }
+
+        .technical-specs ul li strong {
+            width: 150px;
+            display: inline-block;
+        }
+
+        .product-image {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .product-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer Styles */
+        footer {
+            background: #222;
+            color: #fff;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #ff6b00;
+        }
+
+        .footer-section p,
+        .footer-section ul li {
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: #ff6b00;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 14px;
+            color: #999;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .product-detail-container {
+                flex-direction: column;
+            }
+
+            .product-image {
+                max-width: 100%;
+            }
+
+            .hero-content h1 {
+                font-size: 36px;
+            }
+
+            .hero-content p {
+                font-size: 16px;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="transparent-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="https://i.postimg.cc/q73qScFc/logo.png" alt="Axe Packages Logo">
+                </div>
+                <nav class="nav-menu">
+                    <a href="new.html">Home</a>
+                    <a href="#products">Products</a>
+                    <a href="/services">Services</a>
+                    <a href="/about">About</a>
+                    <a href="/contact">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="product-hero" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://i.postimg.cc/pdPPh5vf/flexo.jpg');">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Flexographic Printing</h1>
+                <p>Fast, efficient printing for corrugated and kraft boxes</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-detail section-padding">
+        <div class="container">
+            <div class="product-detail-container">
+                <div class="product-description">
+                    <h2>Flexographic <span>Printing</span></h2>
+                    <p>Our flexographic printing services deliver crisp, clean artwork and text on corrugated materials with quick turnaround times. Ideal for high-volume orders requiring consistent quality across large runs.</p>
+                    
+                    <div class="product-features">
+                        <h3>Key Features</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> High-speed production capabilities</li>
+                            <li><i class="fas fa-check-circle"></i> Excellent ink coverage on corrugated surfaces</li>
+                            <li><i class="fas fa-check-circle"></i> Cost-effective for medium to large runs</li>
+                            <li><i class="fas fa-check-circle"></i> Compatible with water-based inks</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="technical-specs">
+                        <h3>Technical Specifications</h3>
+                        <ul>
+                            <li><strong>Print Width:</strong> Up to 80 inches</li>
+                            <li><strong>Color Capacity:</strong> Up to 6 colors inline</li>
+                            <li><strong>Line Speed:</strong> Up to 600 fpm</li>
+                            <li><strong>Substrate:</strong> Corrugated, kraft, poly films</li>
+                            <li><strong>Minimum Order:</strong> 500 pieces</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="product-image">
+                    <img src="https://i.postimg.cc/0NYTLDMN/flexographir-printing.png" alt="Flexo Printing Samples">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Axe Packages</h4>
+                    <p>We are a leading provider of premium packaging solutions, delivering innovative and high-quality products to enhance your brand.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/products">Products</a></li>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>Email: info@axepackages.com</p>
+                    <p>Phone: +1 (800) 123-4567</p>
+                    <p>Address: 123 Packaging Lane, Suite 100, City, Country</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Axe Packages. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
